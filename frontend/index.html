@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Timer App</title>
+  </head>
+  <body>
+    <div id="name" class="mx-auto text-center">
+      <button class="btn active" onclick="showStopwatch()">BẤM GIỜ</button>
+      <button class="btn" onclick="showCountdown()">ĐẾM NGƯỢC</button>
+      <button class="btn" onclick="showAlarm()">BÁO THỨC</button>
+    </div>
+    <div id="stopwatch" class="container active-container">
+      <div class="row">
+        <div id="time" class="col-12 text-center mb-3 hour">00:00:00</div>
+        <div class="row justify-content-center action">
+          <button
+            id="startRuntime"
+            onclick="runTime()"
+            class="col-2 mx-3 text-center"
+          >
+            BẮT ĐẦU
+          </button>
+          <button onclick="saveTime()" class="col-2 mx-3 text-center">
+            LƯU
+          </button>
+          <button onclick="resetTime()" class="col-2 mx-3 text-center">
+            ĐẶT LẠI
+          </button>
+        </div>
+      </div>
+      <div class="dataTime mt-5 mx-5">
+        <h2 class="text-center">DỮ LIỆU BẤM GIỜ</h2>
+        <table id="myTable" class="text-center mx-5">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Thời gian lưu</th>
+              <!-- <th>Vòng thời gian</th> -->
+              <th>Thời gian hiện tại</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr> -->
+          </tbody>
+        </table>
+        <div class="row justify-content-center actionData mt-3">
+          <button class="col-2 mx-3 text-center">XUẤT FILE</button>
+          <button onclick="deleteData()" class="col-2 mx-3 text-center">
+            XÓA
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="countdown" class="mt-5 inactive-container">
+      <!-- Giao diện đếm ngược -->
+      <div class="row">
+        <div class="row mx-auto justify-content-center selectTime">
+          <div class="col-3 form-group text-center">
+            <label for="hour">Hour</label>
+            <select class="form-select text-center" id="hour">
+              <option selected>00</option>
+              
+            </select>
+          </div>
+          <div class="col-3 form-group text-center">
+            <label for="minute">Minute</label>
+            <select class="form-select text-center" id="minute">
+              <option selected>00</option>
+          
+            </select>
+          </div>
+          <div class="col-3 form-group text-center">
+            <label for="second">Second</label>
+            <select class="form-select text-center" id="second">
+              <option selected>00</option>
+              <!-- Sử dụng vòng lặp để tạo các tùy chọn từ 01 đến 60 -->
+              
+            </select>
+          </div>
+        </div>
+        <button class="col-2 mx-auto mt-4" onclick="timeCountdown()">
+          BẮT ĐẦU
+        </button>
+        <div id="timeCountdown" class="mx-auto text-center mt-5"></div>
+      </div>
+    </div>
+    <div id="alarm" class="inactive-container">
+      <!-- Giao diện báo thức -->
+      <h1 class="text-center">Báo thức</h1>
+      <h2 class="text-center">Em chưa làm hihi</h2>
+    </div>
+  </body>
+  <script src="./assets/js/main.js"></script>
+</html>

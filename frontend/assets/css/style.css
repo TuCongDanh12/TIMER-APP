@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY5DITOYKrF-i24b_USpCi4Y9xsrZGbxZA8Cwqo4vh4RUhNCi8FKjNqigVKXUaFEi3Jlk&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: ui-sans-serif;
+    height: 100vh;
+    
+}
+
+.container {
+    margin-top: 20px;
+    
+}
+
+#name{
+    font-size: 20px;
+    margin: 10px;
+}
+#name button{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 20px;
+}
+#name .active{
+    background-color:  #fabbe9;
+}
+
+/* #name button:hover{
+    background-color:  #fabbe9;
+} */
+.inactive-container{
+    display: none;
+}
+.active-container{
+    display: block;
+}
+.hour,#timeCountdown{
+    font-size: 140px;
+}
+button {
+    border-radius: 5px;
+    border: solid 1px ;
+    padding: 10px;
+    font-weight: 700;
+  
+}   
+
+.action > button:nth-child(1){
+    background-color: #E6E6FA
+}
+
+button:hover{
+    background-color: #fabbe9;
+}
+
+.action > div:nth-child(2){
+    background-color: #C4E8D4
+}
+.dataTime h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+.dataTime{
+    display: none;
+}
+.openData{
+    display: block;
+}
+.dataTime table{
+    width: 100%;
+}
+
+.actionData button{
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.actionData button:nth-child(2){
+    background-color: #ff4a68;
+}
+
+.disabled{
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+@media screen and (max-width:528px) {
+    #name{
+        font-size: 24px;
+    }
+    .hour,#timeCountdown{
+        font-size: 80px;
+    }
+    
+    .action{
+        font-size: 10px;
+    }
+}
